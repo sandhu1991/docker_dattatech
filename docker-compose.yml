@@ -1,0 +1,41 @@
+version: '2.2'
+
+services:
+  db:
+    image: mariadb
+    ports:
+      - "33064:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: someadatta
+      MYSQL_DATABASE: datta_tech
+      MYSQL_USER: workland
+      MYSQL_PASSWORD: workland
+    volumes:
+      - data:/var/lib/mysql  
+
+  app:
+    build: .
+    command: npm run dev
+    volumes:
+      - ./src:/usr/src/app/
+    depends_on:
+      - db
+    ports:
+      - "8000:8000"
+    restart: always
+
+  phpmyadmin:
+    image: 'phpmyadmin/phpmyadmin'
+    restart: always
+    ports:
+      - '8001:80'
+    links:
+      - db:mysql
+    environment:
+      MYSQL_USERNAME: root
+      MYSQL_ROOT_PASSWORD: somedatta
+      
+volumes:
+  data:    
+
