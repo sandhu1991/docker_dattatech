@@ -1,16 +1,15 @@
-<<<<<<< HEAD
-# Datta Tech Consulting Website 
+# Datta Tech Consulting Website(Dockerized app) 
 
 
 # Technoldies used: NodeJS, Express & EJS view engine
 
-## Document
-* Clone this repo: ``` git clone https://github.com/sandhu1991/datta_tech.git ```
-* Install dependencies using [npm](https://www.npmjs.com/) javascript package manager: ``` npm install ```
-* Start app : ``` npm start ```
-* For development run : ```npm run start:dev```(will reflect changes on save)
-* Tune to url: ``` http://localhost:8000 ```
+# Prerequisites
+* Docker setup
 
-=======
-# docker_dattatech
->>>>>>> 4f093127fb427703281ff3905ae047758436f031
+## Document
+* Clone this repo: ``` git clone https://github.com/sandhu1991/docker_dattatech.git ```
+* Cd to the directory : ``` cd /docker_dattatech ```
+* Run Docker composer command to build container: ``` docker-composer up -d ```
+* For development run : ```docker-compose up```(will reflect changes on container)
+* Tune to url for app: ``` http://localhost:8000 ```
+* Tune to url for DB: ``` http://localhost:8001 ```
