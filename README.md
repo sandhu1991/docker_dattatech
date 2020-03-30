@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Datta Tech Consulting Website 
 
 
@@ -10,3 +11,6 @@
 * For development run : ```npm run start:dev```(will reflect changes on save)
 * Tune to url: ``` http://localhost:8000 ```
 
+=======
+# docker_dattatech
+>>>>>>> 4f093127fb427703281ff3905ae047758436f031
